@@ -39,7 +39,14 @@ export function Footer() {
             <p className="text-slate-500 font-medium leading-relaxed max-w-sm mb-12">
               We're a team of passionate designers and strategists dedicated to building meaningful digital experiences.
             </p>
-            <p className="text-sm font-bold text-slate-400">© Copyright 2026 JobVanta</p>
+            <div className="flex flex-col items-center gap-4">
+              <p className="text-sm font-bold text-slate-400">© Copyright 2026 JobVanta</p>
+              <div className="flex gap-6 text-sm font-medium">
+                <Link href="/privacy" className="text-slate-400 hover:text-emerald-600 transition-colors">Privacy Policy</Link>
+                <Link href="/refund" className="text-slate-400 hover:text-emerald-600 transition-colors">Refund Policy</Link>
+                <Link href="/terms" className="text-slate-400 hover:text-emerald-600 transition-colors">Terms of Service</Link>
+              </div>
+            </div>
           </div>
 
           {/* Column 3: Contact/Socials */}
