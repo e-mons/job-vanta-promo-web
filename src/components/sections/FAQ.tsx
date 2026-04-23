@@ -35,7 +35,7 @@ export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="py-24 bg-white" id="faq">
+    <section className="py-16 md:py-24 bg-white" id="faq">
       <div className="max-w-4xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-20">
@@ -51,7 +51,7 @@ export function FAQ() {
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-5xl md:text-6xl font-black text-slate-900 tracking-tight"
+            className="text-3xl md:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-tight px-4"
           >
             Frequently Asked Question
           </motion.h2>
@@ -69,7 +69,7 @@ export function FAQ() {
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
               >
                 <div className="flex-1 pr-8">
-                  <h3 className={`text-xl md:text-2xl font-black transition-colors duration-300 ${
+                  <h3 className={`text-lg md:text-xl lg:text-2xl font-black transition-colors duration-300 ${
                     openIndex === i ? "text-slate-900" : "text-slate-900 hover:text-emerald-600"
                   }`}>
                     {faq.q}

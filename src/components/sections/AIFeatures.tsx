@@ -20,9 +20,9 @@ const aiFeatures = [
 
 export function AIFeatures() {
   return (
-    <section className="py-24 bg-white">
+    <section className="py-16 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-col lg:flex-row items-center gap-16">
+        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
           <div className="flex-1 order-2 lg:order-1">
              <div className="grid grid-cols-1 gap-8">
                 {aiFeatures.map((feature, i) => (
@@ -35,13 +35,13 @@ export function AIFeatures() {
                     className="p-8 rounded-[2.5rem] bg-emerald-50 border border-emerald-100 relative overflow-hidden group"
                   >
                     <div className="relative z-10 flex gap-6">
-                       <div className="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center text-emerald-600">
-                          <feature.icon className="w-7 h-7" />
+                       <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-white shadow-sm flex items-center justify-center text-emerald-600 flex-none">
+                          <feature.icon className="w-6 h-6 md:w-7 md:h-7" />
                        </div>
                        <div className="flex-1">
                           <h3 className="text-xl font-bold text-slate-900 mb-2">{feature.title}</h3>
-                          <p className="text-slate-600 mb-4">{feature.description}</p>
-                          <p className="text-sm font-bold text-emerald-600 italic">"{feature.benefit}"</p>
+                          <p className="text-sm md:text-base text-slate-600 mb-4">{feature.description}</p>
+                          <p className="text-xs md:text-sm font-bold text-emerald-600 italic">"{feature.benefit}"</p>
                        </div>
                     </div>
                   </motion.div>
@@ -59,11 +59,11 @@ export function AIFeatures() {
                   <Sparkles className="w-4 h-4 text-emerald-600" />
                   <span className="text-sm font-medium text-emerald-700">Next-Gen AI Integration</span>
                 </div>
-                <h2 className="text-4xl font-bold text-slate-900 mb-6">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 leading-tight">
                   Work Smarter, <br />
                   <span className="text-emerald-600">Not Harder with AI.</span>
                 </h2>
-                <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+                <p className="text-base md:text-lg text-slate-600 mb-8 leading-relaxed">
                   JobVanta leverages advanced AI to bridge the gap between your skills and your dream career. We provide real-time suggestions to strengthen your impact and handle the tedious logistics of job hunting.
                 </p>
                 <div className="p-6 rounded-2xl bg-slate-900 text-white relative overflow-hidden">

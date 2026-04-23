@@ -30,11 +30,11 @@ export function Navbar({ forceSolid = false }: { forceSolid?: boolean } = {}) {
   return (
     <nav
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-500 px-8 py-6",
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-500 px-4 md:px-8 py-4 md:py-6",
         forceSolid
-          ? "py-4 bg-slate-950 backdrop-blur-xl border-b border-white/10"
+          ? "bg-slate-950 backdrop-blur-xl border-b border-white/10"
           : isScrolled 
-            ? "py-4 bg-slate-950/60 backdrop-blur-xl border-b border-white/5" 
+            ? "bg-slate-950/60 backdrop-blur-xl border-b border-white/5" 
             : "bg-transparent"
       )}
     >
@@ -89,7 +89,7 @@ export function Navbar({ forceSolid = false }: { forceSolid?: boolean } = {}) {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="absolute top-full left-0 right-0 bg-slate-950/95 backdrop-blur-2xl border-b border-white/10 p-8 flex flex-col gap-6 md:hidden overflow-hidden"
+            className="absolute top-full left-0 right-0 bg-slate-950/95 backdrop-blur-2xl border-b border-white/10 p-6 md:p-8 flex flex-col gap-5 md:hidden overflow-hidden"
           >
             {navLinks.map((link, i) => (
               <Link

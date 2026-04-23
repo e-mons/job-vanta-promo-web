@@ -63,6 +63,37 @@
   --color-ring: oklch(0.439 0 0);
 }
 
+@layer base {
+  :root {
+    --section-py: 8rem;
+    --container-px: 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    :root {
+      --section-py: 5rem;
+      --container-px: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    :root {
+      --section-py: 4rem;
+      --container-px: 0.75rem;
+    }
+  }
+}
+
+@utility py-section {
+  padding-top: var(--section-py);
+  padding-bottom: var(--section-py);
+}
+
+@utility px-container {
+  padding-left: var(--container-px);
+  padding-right: var(--container-px);
+}
+
 @utility glass {
   background-color: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(12px);

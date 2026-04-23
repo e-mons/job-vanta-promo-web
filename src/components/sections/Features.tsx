@@ -57,7 +57,7 @@ export function Features() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-5xl md:text-6xl font-black text-slate-900 mb-6 tracking-tight"
+            className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 mb-6 tracking-tight leading-tight px-4"
           >
             The Intelligent Career Partner
           </motion.h2>
@@ -65,9 +65,9 @@ export function Features() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="max-w-2xl mx-auto text-lg text-slate-500 font-medium leading-relaxed"
+            className="max-w-2xl mx-auto text-base md:text-lg text-slate-500 font-medium leading-relaxed px-4"
           >
-            Expand your professional reach effortlessly with JobVanta's <br />
+            Expand your professional reach effortlessly with JobVanta's <br className="hidden md:block" />
             integrated career suite – Elevate your game today.
           </motion.p>
         </div>
@@ -76,7 +76,7 @@ export function Features() {
         <div className="relative flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-0">
           
           {/* Left Feature Column */}
-          <div className="flex flex-col gap-16 lg:w-[30%] order-2 lg:order-1">
+          <div className="flex flex-col gap-10 md:gap-16 lg:w-[30%] order-2 lg:order-1">
             {featureCards.filter(f => f.side === "left").map((feature, i) => (
               <motion.div
                 key={feature.title}
@@ -86,10 +86,10 @@ export function Features() {
                 transition={{ delay: i * 0.2 }}
                 className="bg-white p-10 rounded-[2.5rem] shadow-xl shadow-slate-200/50 border border-slate-100 text-center lg:text-right relative group"
               >
-                <div className={`w-16 h-16 rounded-2xl ${feature.iconBg} ${feature.iconColor} flex items-center justify-center mb-6 mx-auto lg:ml-auto lg:mr-0 shadow-sm group-hover:scale-110 transition-transform`}>
-                  <feature.icon className="w-8 h-8" />
+                <div className={`w-12 h-12 md:w-16 md:h-16 rounded-xl md:rounded-2xl ${feature.iconBg} ${feature.iconColor} flex items-center justify-center mb-4 md:mb-6 mx-auto lg:ml-auto lg:mr-0 shadow-sm group-hover:scale-110 transition-transform`}>
+                  <feature.icon className="w-6 h-6 md:w-8 md:h-8" />
                 </div>
-                <h3 className="text-2xl font-black text-slate-900 mb-3">{feature.title}</h3>
+                <h3 className="text-xl md:text-2xl font-black text-slate-900 mb-2 md:mb-3">{feature.title}</h3>
                 <p className="text-slate-500 font-medium leading-relaxed italic text-sm">
                   {feature.description}
                 </p>
@@ -120,7 +120,7 @@ export function Features() {
           </motion.div>
 
           {/* Right Feature Column */}
-          <div className="flex flex-col gap-16 lg:w-[30%] order-3">
+          <div className="flex flex-col gap-10 md:gap-16 lg:w-[30%] order-3">
             {featureCards.filter(f => f.side === "right").map((feature, i) => (
               <motion.div
                 key={feature.title}
@@ -128,12 +128,12 @@ export function Features() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.2 }}
-                className="bg-white p-10 rounded-[2.5rem] shadow-xl shadow-slate-200/50 border border-slate-100 text-center lg:text-left relative group"
+                className="bg-white p-8 md:p-10 rounded-[2rem] md:rounded-[2.5rem] shadow-xl shadow-slate-200/50 border border-slate-100 text-center lg:text-left relative group"
               >
-                <div className={`w-16 h-16 rounded-2xl ${feature.iconBg} ${feature.iconColor} flex items-center justify-center mb-6 mx-auto lg:mr-auto lg:ml-0 shadow-sm group-hover:scale-110 transition-transform`}>
-                  <feature.icon className="w-8 h-8" />
+                <div className={`w-12 h-12 md:w-16 md:h-16 rounded-xl md:rounded-2xl ${feature.iconBg} ${feature.iconColor} flex items-center justify-center mb-4 md:mb-6 mx-auto lg:mr-auto lg:ml-0 shadow-sm group-hover:scale-110 transition-transform`}>
+                  <feature.icon className="w-6 h-6 md:w-8 md:h-8" />
                 </div>
-                <h3 className="text-2xl font-black text-slate-900 mb-3">{feature.title}</h3>
+                <h3 className="text-xl md:text-2xl font-black text-slate-900 mb-2 md:mb-3">{feature.title}</h3>
                 <p className="text-slate-500 font-medium leading-relaxed italic text-sm">
                   {feature.description}
                 </p>

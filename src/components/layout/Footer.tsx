@@ -13,7 +13,7 @@ export function Footer() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 lg:gap-0 relative">
           
           {/* Column 1: Navigation */}
-          <div className="lg:pr-16 lg:border-r border-slate-200/60">
+          <div className="lg:pr-16 lg:border-r border-slate-200/60 pb-12 lg:pb-0">
             <h3 className="text-2xl font-black text-slate-900 mb-8 uppercase tracking-tight">Navigation</h3>
             <div className="grid grid-cols-2 gap-y-4 gap-x-8 mb-12">
               <Link href="#" className="text-slate-500 font-medium hover:text-emerald-600 transition-colors">Work</Link>

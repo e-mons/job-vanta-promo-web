@@ -7,14 +7,14 @@ export default function RefundPolicy() {
   return (
     <div className="min-h-screen bg-white">
       <Navbar forceSolid={true} />
-      <main className="pt-32 pb-24">
+      <main className="pt-24 md:pt-32 pb-16 md:pb-24">
         <div className="max-w-4xl mx-auto px-6">
-          <div className="mb-16">
-            <h1 className="text-4xl md:text-5xl font-black text-slate-900 mb-4 tracking-tight">Refund Policy</h1>
-            <p className="text-slate-500 text-lg font-medium">Last updated: {currentDate}</p>
+          <div className="mb-12 md:mb-16 text-center md:text-left">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-slate-900 mb-4 tracking-tight leading-tight">Refund Policy</h1>
+            <p className="text-slate-500 text-base md:text-lg font-medium">Last updated: {currentDate}</p>
           </div>
           
-          <div className="space-y-12 text-slate-600 leading-relaxed text-lg">
+          <div className="space-y-10 md:space-y-12 text-slate-600 leading-relaxed text-base md:text-lg">
             
             <section>
               <h2 className="text-2xl font-black text-slate-900 mb-4 tracking-tight">1. General Overview</h2>

@@ -24,23 +24,37 @@ export function TrustBar() {
           Our Trusted Partner
         </motion.p>
 
-        <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-10 lg:gap-x-20">
-          {partners.map((partner, i) => (
-            <motion.div
-              key={partner.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1, duration: 0.5 }}
-              className="group cursor-pointer"
-            >
-              <img
-                src={partner.logo}
-                alt={partner.name}
-                className="h-8 md:h-10 w-auto grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
-              />
-            </motion.div>
-          ))}
+        <div className="relative overflow-hidden w-full">
+          {/* Infinite Scroll Container */}
+          <motion.div 
+            className="flex items-center gap-x-12 md:gap-x-20 w-fit"
+            animate={{ 
+              x: ["0%", "-50%"] 
+            }}
+            transition={{ 
+              duration: 20, 
+              repeat: Infinity, 
+              ease: "linear" 
+            }}
+          >
+            {/* Double the array for seamless looping */}
+            {[...partners, ...partners].map((partner, i) => (
+              <div
+                key={`${partner.name}-${i}`}
+                className="group cursor-pointer flex-none"
+              >
+                <img
+                  src={partner.logo}
+                  alt={partner.name}
+                  className="h-7 md:h-10 w-auto grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
+                />
+              </div>
+            ))}
+          </motion.div>
+          
+          {/* Gradient Masks (Fade edges) */}
+          <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-white to-transparent z-10" />
+          <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-white to-transparent z-10" />
         </div>
       </div>
     </section>

@@ -30,7 +30,7 @@ export function JobSearch() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section className="py-24 px-6 md:px-12 bg-[#041d14] text-white relative overflow-hidden rounded-[4rem] mx-6 mb-24 border border-white/5" id="job-search">
+    <section className="py-16 md:py-24 px-4 md:px-12 bg-[#041d14] text-white relative overflow-hidden rounded-[2rem] md:rounded-[4rem] mx-4 md:mx-6 mb-16 md:mb-24 border border-white/5" id="job-search">
       {/* Background Ribbed Texture - Refined for 3D depth */}
       <div className="absolute inset-0 opacity-40 pointer-events-none" 
         style={{ 
@@ -66,7 +66,7 @@ export function JobSearch() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-5xl md:text-6xl font-black text-white"
+              className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight"
             >
               Find Your Next <br /> Milestone, Faster
             </motion.h2>
@@ -107,9 +107,9 @@ export function JobSearch() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="lg:col-span-4"
+            className="lg:col-span-4 order-1 lg:order-1"
           >
-            <div className="bg-white rounded-[3rem] p-4 shadow-3xl">
+            <div className="bg-white rounded-[2rem] md:rounded-[3rem] p-3 md:p-4 shadow-3xl">
               <div className="rounded-[2.5rem] overflow-hidden aspect-[4/5] relative bg-slate-900">
                 <Image
                   src="/images/hero-mockup.png"
@@ -134,9 +134,9 @@ export function JobSearch() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="lg:col-span-6 lg:mb-12"
+            className="lg:col-span-6 lg:mb-12 order-2 lg:order-2"
           >
-            <div className="relative p-12 md:p-16 rounded-[3rem] bg-white/10 backdrop-blur-2xl border border-white/10 shadow-[0_50px_100px_rgba(0,0,0,0.5)]">
+            <div className="relative p-8 md:p-16 rounded-[2rem] md:rounded-[3rem] bg-white/10 backdrop-blur-2xl border border-white/10 shadow-[0_50px_100px_rgba(0,0,0,0.5)]">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500 text-slate-950 text-[10px] font-black uppercase tracking-widest mb-6">
                  {searchFeatures[activeIndex].category}
               </div>
@@ -159,7 +159,7 @@ export function JobSearch() {
           </motion.div>
 
           {/* Thumbnail Filters Row */}
-          <div className="lg:col-span-2 flex flex-col items-center lg:items-end justify-center gap-6">
+          <div className="lg:col-span-2 flex flex-col items-center lg:items-end justify-center gap-6 order-3 lg:order-3">
             <div className="inline-block px-4 py-1.5 rounded-full bg-slate-800/80 border border-white/10 text-[10px] font-black tracking-widest text-emerald-400 uppercase">
                {activeIndex + 1} / {searchFeatures.length}
             </div>

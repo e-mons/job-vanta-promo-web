@@ -30,8 +30,8 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section className="py-24 px-6 md:px-12 bg-white relative overflow-hidden" id="testimonials">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-16 md:py-24 px-4 md:px-12 bg-white relative overflow-hidden" id="testimonials">
+      <div className="max-w-7xl mx-auto px-4 md:px-0">
         <div className="text-center mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -46,9 +46,9 @@ export function Testimonials() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl font-black text-slate-900 mb-6"
+            className="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 mb-6 leading-tight"
           >
-            Trusted by the world's <br /> best talent
+            Trusted by the world's <br className="hidden md:block" /> best talent
           </motion.h2>
         </div>
 
@@ -60,7 +60,7 @@ export function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="p-8 rounded-[2.5rem] bg-slate-50 border border-slate-100 hover:border-emerald-200 hover:bg-white hover:shadow-2xl hover:shadow-emerald-500/10 transition-all duration-300 group"
+              className="p-6 md:p-8 rounded-[2rem] md:rounded-[2.5rem] bg-slate-50 border border-slate-100 hover:border-emerald-200 hover:bg-white hover:shadow-2xl hover:shadow-emerald-500/10 transition-all duration-300 group"
             >
               <div className="flex gap-1 mb-6">
                 {[...Array(5)].map((_, i) => (

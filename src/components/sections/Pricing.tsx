@@ -61,11 +61,11 @@ const plans = [
 
 export function Pricing() {
   return (
-    <section className="py-24 bg-slate-50" id="pricing">
+    <section className="py-16 md:py-24 bg-white" id="pricing">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="text-4xl font-bold text-slate-900 mb-4">Invest in Your Career</h2>
-          <p className="text-slate-500">
+        <div className="text-center max-w-2xl mx-auto mb-16 px-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">Invest in Your Career</h2>
+          <p className="text-base md:text-lg text-slate-500">
             Most users find that JobVanta pays for itself with their first paycheck from a new role. Choose the plan that fits your ambition.
           </p>
         </div>
@@ -78,8 +78,8 @@ export function Pricing() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className={`relative bg-white p-8 rounded-[2.5rem] border ${
-                plan.popular ? "border-emerald-500 shadow-xl shadow-emerald-500/10 ring-4 ring-emerald-50" : "border-slate-100 shadow-sm"
+              className={`relative bg-white p-6 md:p-8 rounded-[2rem] md:rounded-[2.5rem] border ${
+                plan.popular ? "border-emerald-500 shadow-xl shadow-emerald-500/10 ring-2 md:ring-4 ring-emerald-50" : "border-slate-100 shadow-sm"
               }`}
             >
               {plan.popular && (

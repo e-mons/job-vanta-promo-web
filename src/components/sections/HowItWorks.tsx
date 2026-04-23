@@ -69,19 +69,20 @@ export function HowItWorks() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-5xl md:text-6xl font-black text-slate-900 mb-6 tracking-tight"
+            className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 mb-6 tracking-tight leading-tight px-4"
           >
             JobVanta App Works Process <br />
-            <span className="text-slate-900">Step by Step</span>
+            <span className="text-emerald-600">Step by Step</span>
           </motion.h2>
+
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="max-w-2xl mx-auto text-lg text-slate-500 font-medium"
+            className="max-w-2xl mx-auto text-base md:text-lg text-slate-500 font-medium px-4"
           >
-            Download, sign up, build your profile, and manage your career <br />
+            Download, sign up, build your profile, and manage your career <br className="hidden md:block" />
             smarter than ever before.
           </motion.p>
         </div>
@@ -96,18 +97,18 @@ export function HowItWorks() {
             className="relative"
           >
             {/* Main User Image */}
-            <div className="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white">
+            <div className="relative z-10 rounded-[2.5rem] md:rounded-[3rem] overflow-hidden shadow-2xl border-4 md:border-8 border-white">
               <Image
                 src="/how_it_works_hero_user.png"
                 alt="User Experience"
                 width={500}
                 height={600}
-                className="w-full object-cover"
+                className="w-full object-cover aspect-[4/5] md:aspect-auto"
               />
               {/* Floating Appraisal Bubble */}
-              <div className="absolute top-1/2 right-12 translate-y-[-50%] bg-emerald-400 text-slate-900 px-6 py-3 rounded-full font-bold shadow-xl flex items-center gap-2">
+              <div className="absolute top-1/2 right-4 md:right-12 translate-y-[-50%] bg-emerald-400 text-slate-900 px-4 md:px-6 py-2 md:py-3 rounded-full text-xs md:text-base font-bold shadow-xl flex items-center gap-2">
                 Track Your Career
-                <div className="w-2 h-2 bg-slate-900 rounded-full animate-bounce" />
+                <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-slate-900 rounded-full animate-bounce" />
               </div>
             </div>
 
@@ -117,14 +118,14 @@ export function HowItWorks() {
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
-              className="absolute -bottom-16 -right-8 z-20 w-64 rounded-[2.5rem] bg-slate-50 p-1.5 shadow-3xl border-4 border-white"
+              className="absolute -bottom-8 md:-bottom-16 -right-4 md:-right-8 z-20 w-48 md:w-64 rounded-[2rem] md:rounded-[2.5rem] bg-slate-50 p-1 md:p-1.5 shadow-3xl border-2 md:border-4 border-white"
             >
               <Image
                 src="/images/hero-mockup.png"
                 alt="App Interface"
                 width={250}
                 height={500}
-                className="rounded-[2.2rem]"
+                className="rounded-[1.8rem] md:rounded-[2.2rem]"
               />
             </motion.div>
           </motion.div>
@@ -134,7 +135,7 @@ export function HowItWorks() {
             {/* Vertical Connector Line */}
             <div className="absolute left-8 top-8 bottom-8 w-0.5 bg-slate-100" />
 
-            <div className="space-y-16">
+            <div className="space-y-12 md:space-y-16">
               {steps.map((step, i) => (
                 <motion.div
                   key={step.title}
@@ -142,18 +143,18 @@ export function HowItWorks() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.2 }}
-                  className="flex gap-10 group"
+                  className="flex gap-6 md:gap-10 group"
                 >
-                  <div className="relative z-10">
-                    <div className="w-16 h-16 rounded-2xl bg-emerald-500 flex items-center justify-center text-white shadow-lg shadow-emerald-500/20 group-hover:scale-110 transition-transform">
-                      <step.icon className="w-8 h-8" />
+                  <div className="relative z-10 flex-none">
+                    <div className="w-12 h-12 md:w-16 md:h-16 rounded-xl md:rounded-2xl bg-emerald-500 flex items-center justify-center text-white shadow-lg shadow-emerald-500/20 group-hover:scale-110 transition-transform">
+                      <step.icon className="w-6 h-6 md:w-8 md:h-8" />
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-2xl font-black text-slate-900 mb-3 group-hover:text-emerald-600 transition-colors">
+                    <h3 className="text-xl md:text-2xl font-black text-slate-900 mb-2 md:mb-3 group-hover:text-emerald-600 transition-colors">
                       {step.title}
                     </h3>
-                    <p className="text-slate-500 font-medium leading-relaxed max-w-sm italic">
+                    <p className="text-sm md:text-base text-slate-500 font-medium leading-relaxed max-w-sm italic">
                       {step.description}
                     </p>
                   </div>
