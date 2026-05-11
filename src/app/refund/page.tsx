@@ -1,93 +1,68 @@
-import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { Navbar } from "@/components/layout/Navbar";
 
-export default function RefundPolicy() {
-  const currentDate = new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
-
+export default function RefundPolicyPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen">
       <Navbar forceSolid={true} />
-      <main className="pt-24 md:pt-32 pb-16 md:pb-24">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="mb-12 md:mb-16 text-center md:text-left">
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-slate-900 mb-4 tracking-tight leading-tight">Refund Policy</h1>
-            <p className="text-slate-500 text-base md:text-lg font-medium">Last updated: {currentDate}</p>
+      <main className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-900 text-white px-6 py-16 pt-38 pb-30">
+        <div className="max-w-5xl mx-auto">
+          <div className="mb-12 text-center">
+            <h1 className="text-5xl font-bold mb-4">Refund Policy</h1>
+            <p className="text-slate-300 text-lg">
+              Effective Date: May 11, 2026
+            </p>
           </div>
-          
-          <div className="space-y-10 md:space-y-12 text-slate-600 leading-relaxed text-base md:text-lg">
-            
+
+          <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 space-y-10 shadow-2xl">
             <section>
-              <h2 className="text-2xl font-black text-slate-900 mb-4 tracking-tight">1. General Overview</h2>
-              <p className="mb-4">
-                Thank you for choosing JobVanta. We strive to provide the highest quality service to assist you in your career journey. If, for any reason, You are not completely satisfied with a purchase, We invite You to review our policy on refunds and returns.
-              </p>
-              <p className="mb-4">
-                The following terms are applicable for any products/services that You purchased with Us.
+              <h2 className="text-2xl font-semibold mb-4">1. Subscription Services</h2>
+              <p className="text-slate-300 leading-8">
+                JobVanta provides premium subscription features including AI resume optimization, cover letter generation, advanced resume analysis, and premium templates.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-black text-slate-900 mb-4 tracking-tight">2. Conditions for Refund</h2>
-              <p className="mb-4">
-                We offer a money-back guarantee for all purchases made on our website under the following conditions:
-              </p>
-              <ul className="list-disc pl-6 space-y-2 marker:text-emerald-500 mb-4">
-                <li>You have requested the refund within <strong className="text-slate-800">14 days</strong> of the original transaction.</li>
-                <li>You have experienced significant technical issues that prevent you from using the core features of the platform, and our support team is unable to resolve them.</li>
-                <li>Less than 20% of your purchased AI credits or active limits have been utilized.</li>
-              </ul>
-              <p>
-                If the conditions are not satisfied, or if 14 days have passed since your purchase, we reserve the right to decline your refund request.
+              <h2 className="text-2xl font-semibold mb-4">2. Payment Providers</h2>
+              <p className="text-slate-300 leading-8">
+                Payments may be processed through Lemon Squeezy, Dodo Payments, Creem, and Paystack.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-black text-slate-900 mb-4 tracking-tight">3. Non-refundable Purchases</h2>
-              <p className="mb-4">
-                Certain purchases and usages are strictly non-refundable, including but not limited to:
-              </p>
-              <ul className="list-disc pl-6 space-y-2 marker:text-emerald-500">
-                <li>Promotional, discounted, or sale items (unless specifically stated).</li>
-                <li>One-time accelerated processing fees or priority application requests.</li>
-                <li>Subscriptions that have been actively used beyond the trial or generous initial usage limits.</li>
+              <h2 className="text-2xl font-semibold mb-4">3. Refund Eligibility</h2>
+              <ul className="list-disc pl-6 text-slate-300 leading-8 space-y-2">
+                <li>Duplicate transactions</li>
+                <li>Unauthorized charges</li>
+                <li>Technical billing errors</li>
+                <li>Service access issues caused by platform failure</li>
               </ul>
             </section>
 
             <section>
-              <h2 className="text-2xl font-black text-slate-900 mb-4 tracking-tight">4. Subscription Cancellations</h2>
-              <p className="mb-4">
-                You may cancel your recurring subscription at any time through your account dashboard. Cancellation will stop any future billing, and you will retain access to your plan's features until the end of your current billing cycle. Canceling a subscription does not automatically qualify you for a refund of the previous or current charge.
+              <h2 className="text-2xl font-semibold mb-4">4. Non-Refundable Situations</h2>
+              <ul className="list-disc pl-6 text-slate-300 leading-8 space-y-2">
+                <li>Failure to cancel before renewal</li>
+                <li>Change of mind</li>
+                <li>Lack of usage</li>
+                <li>Employment outcomes</li>
+                <li>AI-generated content dissatisfaction</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-semibold mb-4">5. Subscription Cancellation</h2>
+              <p className="text-slate-300 leading-8">
+                Users may cancel subscriptions at any time. Cancellation prevents future billing but does not automatically trigger refunds for prior billing periods.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-black text-slate-900 mb-4 tracking-tight">5. Process for Requesting a Refund</h2>
-              <p className="mb-4">
-                To request a refund, please contact our support team with your account details, purchase receipt, and a clear explanation of why you are requesting a refund. You can reach out to us via email or our dedicated support portal.
-              </p>
-              <p className="mb-4">
-                Refunds are processed to the original payment method used during the purchase. Please note that it may take 5-10 business days for the credit to appear on your statement, depending on your card issuer's policies.
+              <h2 className="text-2xl font-semibold mb-4">6. Contact Billing Support</h2>
+              <p className="text-slate-300 leading-8">
+                Email: billing@jobvanta.ai
               </p>
             </section>
-
-            <section>
-              <h2 className="text-2xl font-black text-slate-900 mb-4 tracking-tight">6. Changes to this Policy</h2>
-              <p className="mb-4">
-                We reserve the right to amend this Refund Policy at any time without prior notice. Any changes will be posted on this page, and your continued use of our services constitutes acceptance of those changes.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-black text-slate-900 mb-4 tracking-tight">7. Contact Us</h2>
-              <p className="mb-4">
-                If you have any questions about our Returns and Refunds Policy, please contact us:
-              </p>
-              <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100">
-                <p className="mb-2"><strong className="text-slate-800">Email:</strong> <a href="mailto:support@jobvanta.com" className="text-emerald-600 hover:text-emerald-700 font-medium transition-colors">support@jobvanta.com</a></p>
-                <p><strong className="text-slate-800">Address:</strong> 123 Tech Boulevard, San Francisco, CA 94105</p>
-              </div>
-            </section>
-
           </div>
         </div>
       </main>
